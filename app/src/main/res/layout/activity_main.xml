@@ -32,7 +32,7 @@
         android:shadowColor="@color/fontColor"
         android:shadowDx="1"
         android:shadowDy="1"
-        android:shadowRadius="2"
+        android:shadowRadius="1"
         android:text="Selecione sua região"
         android:textAllCaps="true"
         android:textColor="@color/fontColor"

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/backgr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".FormularioActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_ipva" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="36dp"
+        android:fontFamily="@font/quantico"
+        android:shadowColor="@color/fontColor"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        android:text="Calcule o valor \ndo seu IPVA"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/fontColor"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/edtFormularioVeiculo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="36dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="Veículo - Montadora"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textColor="@color/fontColor"
+        android:textColorHint="@color/fontColor"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/edtFormularioValor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/edtFormularioValor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="Valor"
+        android:inputType="numberDecimal"
+        android:textAlignment="textStart"
+        android:textColor="@color/fontColor"
+        android:textColorHint="@color/fontColor"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/spnFormularioEstado"
+        app:layout_constraintEnd_toEndOf="@+id/edtFormularioVeiculo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/edtFormularioVeiculo"
+        app:layout_constraintTop_toBottomOf="@+id/edtFormularioVeiculo" />
+
+    <Spinner
+        android:id="@+id/spnFormularioEstado"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:textColor="@color/fontColor"
+        android:textSize="22sp"
+        android:backgroundTint="@color/background"
+        android:hapticFeedbackEnabled="false"
+        android:textAlignment="textStart"
+        android:theme="@style/SpinnerPersonalizado"
+        app:layout_constraintBottom_toTopOf="@+id/btnFormularioCalc"
+        app:layout_constraintEnd_toEndOf="@+id/edtFormularioValor"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/edtFormularioValor"
+        app:layout_constraintTop_toBottomOf="@+id/edtFormularioValor" />
+
+    <Button
+        android:id="@+id/btnFormularioCalc"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/buttonColor"
+        android:elegantTextHeight="true"
+        android:fontFamily="@font/quantico"
+        android:shadowRadius="15"
+        android:text="CALCULAR"
+        android:textColor="@color/fontColor"
+        android:textSize="24sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnFormularioEstado" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
